@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CadiaAFK_Plugin">
+    <output-path>$USER_HOME$/OneDrive/Desktop</output-path>
+    <root id="archive" name="CadiaAFK_Plugin.jar" />
+  </artifact>
+</component>

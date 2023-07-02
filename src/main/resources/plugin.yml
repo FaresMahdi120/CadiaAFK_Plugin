@@ -1,0 +1,11 @@
+name: CadiaAFK
+version: '${project.version}'
+main: me.fares.dev.cadiaafk.CadiaAFK
+api-version: '1.13'
+commands:
+  AFKReward:
+    description: "Admin command!"
+depend:
+  - WorldGuardEvents
+softdepend:
+  - PlaceholderAPI

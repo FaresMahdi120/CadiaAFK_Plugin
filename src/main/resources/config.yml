@@ -1,0 +1,55 @@
+#-------------------------------------------------------------------------------------------------#
+# Created by FaresMahdi120, this plugin is made specially for huntingzap and His network!
+#
+# Use placeholders everywhere you can also use other PlaceholderAPI's placeholders:
+# %afkrewards_player% get the current player
+# %afkrewards_prefix% get the prefix
+# %afkrewards_time_limit% get the time to stay in the pool to get rewarded
+# %afkrewards_time_stayed% get time stayed in the pool by a specific player
+#------------------------------------------------------------------------------------------------#
+
+Settings:
+  #Case-sensitive!
+  #WorldGuard create lower cased regions even if the input was uppercase
+  #Do not use the upper case version!
+  WorldGuard_Regions:
+    - "example_region"
+    - "example_region_2"
+  # Will execute only and or console commands!
+  Rewards:
+    - "give %afkrewards_player% minecraft:stone"
+    - "say lmao"
+  # Time to reward a player for staying in the pool
+  Time_To_Reward_In_Minutes: 60 #in minutes
+  # Warning messages will send a message every selected time
+  Give_Warning_when_time_is:
+    - 30
+    - 20
+    - 10
+    - 5
+    - 1
+  Warning_Messages_Template: "%afkrewards_prefix% &cYou have passed &d%afkrewards_time_stayed%&c minutes!"
+Messages:
+  Prefix: "&a&l[&2&lCadiaAFK&a&l]"
+  Player_Enter_Pool_Message: "%afkrewards_prefix% &cYou have entered the AFK pool, stay here for &d%afkrewards_time_limit%&c minutes to receive rewards!"
+  Player_Leave_Pool_Message: "%afkrewards_prefix% &cyou have left the AFK pool and stayed for &d%afkrewards_time_stayed%&c minutes, your time has been reset to 0 seconds!"
+  Player_Rewarded_message: "%afkrewards_prefix% &cYou have been rewarded &ffor AFKing in the &aAFK pool&c &7(&f%afkrewards_time_limit% minutes&7)"
+Titles:
+  General_Settings:
+    Title_Time: 1 #seconds
+    Fade_In: 5 #seconds
+    Fade_out: 2 #seconds
+  PlayerJoinPoolTitle: "&e&lYou have entered AFK"
+  PlayerJoinPoolSub_Title: "&e&lYou need to stay here for %afkrewards_time_limit% minutes"
+  PlayerLeavePoolTitle: "&e&lYou have left the AFK"
+  PlayerLeavePoolSub_Title: "&e&lYou have stayed there for %afkrewards_time_stayed% minutes"
+  PlayerRewardTitle: "&e&lAFK timer alert!"
+  PlayerRewardSub_Title: "&e&lYou have been rewarded!"
+Sound_Effect:
+  #Do not use (_) as of 1.19.4
+  #No need to lower case those, its auto lowercased as of 1.14.5
+  Sound_Effect_Leaving: "ENTITY.ENDERMAN.TELEPORT"
+  Sound_Effect_Entering: "ENTITY.VILLAGER.YES"
+  Sound_Effect_Rewarded: "ENTITY.ENDER_DRAGON.GROWL"
+  Pitch: 1
+  volume: 20
